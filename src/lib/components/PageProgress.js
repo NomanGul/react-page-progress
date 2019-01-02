@@ -12,9 +12,12 @@ export default class PageProgress extends Component {
   watchScrolling() {
     window.onscroll = () => {
       // console.log("scrolling....");
-      const winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      const { scrollHeight, clientHeight } = document.documentElement;
+      const {
+        scrollHeight,
+        clientHeight,
+        scrollTop
+      } = document.documentElement;
+      const winScroll = document.body.scrollTop || scrollTop;
       const height = scrollHeight - clientHeight;
       const scrolled = (winScroll / height) * 100;
       // document.querySelector(".progress").style.width = scrolled + "%";
