@@ -13,8 +13,8 @@ export default class PageProgress extends Component {
     const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
     const winScroll = document.body.scrollTop || scrollTop;
     const height = scrollHeight - clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    // document.querySelector(".progress").style.width = scrolled + "%";
+    const width = `${(winScroll / height) * 100}%`;
+    // document.querySelector(".progress").style.width = width + "%";
     if (height > 0) {
       return (this.componentRef.current.style.width = scrolled + "%");
     } else {
