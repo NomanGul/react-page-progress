@@ -5,7 +5,7 @@ export default class PageProgress extends Component {
   constructor(props) {
     super(props);
 
-    this.componentRef = React.createRef();
+    this.state = { width: null };
     this.watchScrolling = this.watchScrolling.bind(this);
   }
 
