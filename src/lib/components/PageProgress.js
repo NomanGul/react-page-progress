@@ -49,7 +49,7 @@ export default class PageProgress extends Component {
     };
     return (
       <div>
-        <div style={styles.progress} ref={this.componentRef} />
+        <div style={styles.progress} />
       </div>
     );
   }
