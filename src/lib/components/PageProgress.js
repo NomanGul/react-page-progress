@@ -24,7 +24,7 @@ export default class PageProgress extends Component {
   }
 
   componentDidMount() {
-    this.watchScrolling();
+    window.addEventListener("scroll", this.watchScrolling);
     // console.log(this.myRef)
   }
 
