@@ -16,9 +16,9 @@ export default class PageProgress extends Component {
     const width = `${(winScroll / height) * 100}%`;
     // document.querySelector(".progress").style.width = width + "%";
     if (height > 0) {
-      return (this.componentRef.current.style.width = scrolled + "%");
+      return this.setState({ width });
     } else {
-      return (this.componentRef.current.style.width = 0);
+      return this.setState({ width: 0 });
     }
   }
 
