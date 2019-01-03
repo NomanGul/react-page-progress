@@ -11,16 +11,15 @@ export default class PageProgress extends Component {
 
   watchScrolling() {
     const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
-      const winScroll = document.body.scrollTop || scrollTop;
-      const height = scrollHeight - clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      // document.querySelector(".progress").style.width = scrolled + "%";
-      if (height > 0) {
-        return (this.componentRef.current.style.width = scrolled + "%");
-      } else {
-        return (this.componentRef.current.style.width = 0);
-      }
-    };
+    const winScroll = document.body.scrollTop || scrollTop;
+    const height = scrollHeight - clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    // document.querySelector(".progress").style.width = scrolled + "%";
+    if (height > 0) {
+      return (this.componentRef.current.style.width = scrolled + "%");
+    } else {
+      return (this.componentRef.current.style.width = 0);
+    }
   }
 
   componentDidMount() {
