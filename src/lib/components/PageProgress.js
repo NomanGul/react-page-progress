@@ -28,6 +28,10 @@ export default class PageProgress extends Component {
     // console.log(this.myRef)
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.watchScrolling);
+  }
+
   render() {
     const { color, height } = this.props;
     const styles = {
