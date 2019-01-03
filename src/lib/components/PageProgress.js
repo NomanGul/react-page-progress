@@ -32,6 +32,7 @@ export default class PageProgress extends Component {
   }
 
   render() {
+    const { width } = this.state;
     const { color, height } = this.props;
     const styles = {
       progress: {
@@ -40,6 +41,7 @@ export default class PageProgress extends Component {
         background: color,
         position: "fixed",
         height: height ? height : 4,
+        width: width,
         top: 0,
         zIndex: 99,
         transition: "width 200ms ease-out"
