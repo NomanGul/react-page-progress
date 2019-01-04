@@ -30,27 +30,21 @@ const PageProgress = ({ color, height }) => {
   );
 
   // computed styling
-    const styles = {
-      progress: {
-        marginTop: 0,
-        padding: 0,
+  const styles = {
+    progress: {
+      marginTop: 0,
+      padding: 0,
       background: color ? color : "skyblue",
-        position: "fixed",
-        height: height ? height : 4,
-        width: width,
-        top: 0,
-        zIndex: 99,
-        transition: "width 200ms ease-out"
-      }
-    };
-    return (
-      <div>
-        <div style={styles.progress} />
-      </div>
-    );
-  }
+      position: "fixed",
+      height: height ? height : 4,
+      width: width,
+      top: 0,
+      zIndex: 99,
+      transition: "width 200ms ease-out"
+    }
+  };
 
   return <div style={styles.progress} />;
-  };
+};
 
 export default PageProgress;
