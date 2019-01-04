@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 // Main Component
 const PageProgress = ({ color, height }) => {
+  // width state with hooks
+  const [width, setWidth] = useState(null);
 
   // For Updating width of progress bar on scrolling
   const watchScrolling = () => {
