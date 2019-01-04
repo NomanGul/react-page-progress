@@ -34,7 +34,7 @@ const PageProgress = ({ color, height }) => {
       progress: {
         marginTop: 0,
         padding: 0,
-        background: color,
+      background: color ? color : "skyblue",
         position: "fixed",
         height: height ? height : 4,
         width: width,
