@@ -18,18 +18,18 @@ const PageProgress = ({ color, height }) => {
     }
   };
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.watchScrolling);
-    // console.log(this.myRef)
-  }
+  // Alternative Hook for componentDidMount, componentDidUpdate and componentWillUnmount
+  useEffect(
+    () => {
+      window.addEventListener("scroll", watchScrolling);
+      return () => {
+        window.removeEventListener("scroll", watchScrolling);
+      };
+    },
+    [color, height]
+  );
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.watchScrolling);
-  }
-
-  render() {
-    const { width } = this.state;
-    const { color, height } = this.props;
+  // computed styling
     const styles = {
       progress: {
         marginTop: 0,
