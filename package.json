@@ -1,6 +1,6 @@
 {
   "name": "react-page-progress",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "React library that tracks a users progress through a page as they scroll",
   "main": "build/index.js",
   "scripts": {
@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NomanGul/react-page-progress.git"
+    "url": "git+https://github.com/nomangul/react-page-progress.git"
   },
   "author": "Noman Gul <nomangul2001@gmail.com>",
   "bugs": {
-    "url": "https://github.com/NomanGul/react-page-progress/issues"
+    "url": "https://github.com/nomangul/react-page-progress/issues"
   },
-  "homepage": "https://NomanGul.github.io/react-page-progress",
+  "homepage": "https://nomangul.github.io/react-page-progress",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
@@ -128,10 +128,6 @@
   },
   "keywords": [
     "react-page-progress",
-    "page-progress",
-    "react-progress-page",
-    "react",
-    "progress-page",
-    "react-library"
+    "react"
   ]
 }
