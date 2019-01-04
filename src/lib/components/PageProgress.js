@@ -50,8 +50,7 @@ const PageProgress = ({ color, height }) => {
     );
   }
 
-  static propTypes = {
-    color: PropTypes.string.isRequired,
-    height: PropTypes.number
+  return <div style={styles.progress} />;
   };
-}
+
+export default PageProgress;
