@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-export default class PageProgress extends Component {
-  constructor(props) {
-    super(props);
+// Main Component
+const PageProgress = ({ color, height }) => {
 
     this.state = { width: null };
     this.watchScrolling = this.watchScrolling.bind(this);
