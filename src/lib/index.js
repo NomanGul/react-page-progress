@@ -1,3 +1,3 @@
-import PageProgress from './components/PageProgress';
+import PageProgress from "./components/PageProgress";
 
 export default PageProgress;
