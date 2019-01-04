@@ -3,22 +3,18 @@ import React, { useState, useEffect } from "react";
 // Main Component
 const PageProgress = ({ color, height }) => {
 
-    this.state = { width: null };
-    this.watchScrolling = this.watchScrolling.bind(this);
-  }
-
-  watchScrolling() {
+  // For Updating width of progress bar on scrolling
+  const watchScrolling = () => {
     const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
     const winScroll = document.body.scrollTop || scrollTop;
     const height = scrollHeight - clientHeight;
-    const width = `${(winScroll / height) * 100}%`;
-    // document.querySelector(".progress").style.width = width + "%";
+    const scrolled = `${(winScroll / height) * 100}%`;
     if (height > 0) {
-      return this.setState({ width });
+      return setWidth(scrolled);
     } else {
-      return this.setState({ width: 0 });
+      return setWidth(0);
     }
-  }
+  };
 
   componentDidMount() {
     window.addEventListener("scroll", this.watchScrolling);
