@@ -29,11 +29,11 @@ yarn add react-page-progress
 
 ### Upcoming Update v1.1.0
 
-**Using React Hooks**
+Using React Hooks
 
-**Color Props Not Required**
+Color Props Not Required
 
-**Remove Prop-Types**
+Remove Prop-Types
 
 ### Demo
 
