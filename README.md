@@ -24,7 +24,7 @@ yarn add react-page-progress
 
 | Props  |  Type  | isRequired | Example                                                                                                                                            |
 | :----- | :----: | :--------: | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color  | string |     No     | `'Default is SkyBlue'`, `'green'` or `'#fb6249'` or ` 'rgb(255, 26, 26)'``// If you want Progress bar Opaque, You can use rgba(...) or hsla(...) ` |
+| color  | string |    Yes     | `'Default is SkyBlue'`, `'green'` or `'#fb6249'` or ` 'rgb(255, 26, 26)'``// If you want Progress bar Opaque, You can use rgba(...) or hsla(...) ` |
 | height | number |     No     | `'Should be a Number, 4 is default'`                                                                                                               |
 
 ### Upcoming Update v1.1.0
