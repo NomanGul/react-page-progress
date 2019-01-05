@@ -1,50 +1,57 @@
-import React, { useState, useEffect } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-// Main Component
-const PageProgress = ({ color, height }) => {
-  // width state with hooks
-  const [width, setWidth] = useState(null);
+export default class PageProgress extends Component {
+  constructor(props) {
+    super(props);
 
-  // For Updating width of progress bar on scrolling
-  const watchScrolling = () => {
+    this.state = { width: null };
+    this.watchScrolling = this.watchScrolling.bind(this);
+  }
+
+  watchScrolling() {
     const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
     const winScroll = document.body.scrollTop || scrollTop;
     const height = scrollHeight - clientHeight;
     const scrolled = `${(winScroll / height) * 100}%`;
+    // document.querySelector(".progress").style.width = scrolled + "%";
     if (height > 0) {
-      return setWidth(scrolled);
+      return this.setState({ width: scrolled });
     } else {
-      return setWidth(0);
+      return this.setState({ width: 0 });
     }
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.watchScrolling);
+    // console.log(this.myRef)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.watchScrolling);
+  }
+
+  render() {
+    const { width } = this.state;
+    const { color, height } = this.props;
+    const styles = {
+      progress: {
+        marginTop: 0,
+        padding: 0,
+        background: color,
+        position: "fixed",
+        height: height ? height : 4,
+        width: width,
+        top: 0,
+        zIndex: 99,
+        transition: "width 200ms ease-out"
+      }
+    };
+    return <div style={styles.progress} />;
+  }
+
+  static propTypes = {
+    color: PropTypes.string.isRequired,
+    height: PropTypes.number
   };
-
-  // Alternative Hook for componentDidMount, componentDidUpdate and componentWillUnmount
-  useEffect(
-    () => {
-      window.addEventListener("scroll", watchScrolling);
-      return () => {
-        window.removeEventListener("scroll", watchScrolling);
-      };
-    },
-    [color, height]
-  );
-
-  // computed styling
-  const styles = {
-    progress: {
-      marginTop: 0,
-      padding: 0,
-      background: color ? color : "skyblue",
-      position: "fixed",
-      height: height ? height : 4,
-      width: width,
-      top: 0,
-      zIndex: 99,
-      transition: "width 200ms ease-out"
-    }
-  };
-
-  return <div style={styles.progress} />;
-};
-
-export default PageProgress;
+}
