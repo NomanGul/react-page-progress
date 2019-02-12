@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from "react";
 
-// Main Component
 const PageProgress = ({ color, height }) => {
-  // width state with hooks
   const [width, setWidth] = useState(null);
 
-  // For Updating width of progress bar on scrolling
   const watchScrolling = () => {
     const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
     const winScroll = document.body.scrollTop || scrollTop;
-    const height = scrollHeight - clientHeight;
-    const scrolled = `${(winScroll / height) * 100}%`;
-    if (height > 0) {
+    const winHeight = scrollHeight - clientHeight;
+    const scrolled = `${(winScroll / winHeight) * 100}%`;
+    if (winHeight > 0) {
       return setWidth(scrolled);
     } else {
       return setWidth(0);
     }
   };
 
-  // Alternative Hook for componentDidMount, componentDidUpdate and componentWillUnmount
   useEffect(
     () => {
       window.addEventListener("scroll", watchScrolling);
@@ -29,7 +25,6 @@ const PageProgress = ({ color, height }) => {
     [color, height]
   );
 
-  // computed styling
   const styles = {
     progress: {
       marginTop: 0,
