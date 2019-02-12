@@ -1,6 +1,6 @@
 # react-page-progress
 
-> React library(Yes, This is the One with HOOKS) that tracks a users progress through a page as they scroll
+> Sweet Component (Yes, This is the one with HOOKS 🚀) that tracks a users progress through a page as they scroll
 
 [![NPM](https://img.shields.io/npm/v/react-page-progress.svg)](https://www.npmjs.com/package/react-page-progress) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -24,16 +24,8 @@ yarn add react-page-progress
 
 | Props  |  Type  | isRequired | Example                                                                                                                                            |
 | :----- | :----: | :--------: | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color  | string |    Yes     | `'Default is SkyBlue'`, `'green'` or `'#fb6249'` or ` 'rgb(255, 26, 26)'``// If you want Progress bar Opaque, You can use rgba(...) or hsla(...) ` |
+| color  | string |     No     | `'Default is SkyBlue'`, `'green'` or `'#fb6249'` or ` 'rgb(255, 26, 26)'``// If you want Progress bar Opaque, You can use rgba(...) or hsla(...) ` |
 | height | number |     No     | `'Should be a Number, 4 is default'`                                                                                                               |
-
-### Upcoming Update v1.1.0
-
-Using React Hooks
-
-Color Props Not Required
-
-Remove Prop-Types
 
 ### Demo
 
