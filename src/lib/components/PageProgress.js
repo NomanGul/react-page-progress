@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const PageProgress = ({ color, height }) => {
+const PageProgress = ({ color, height, ...props }) => {
   const [width, setWidth] = useState(null);
 
   const watchScrolling = () => {
@@ -39,7 +39,7 @@ const PageProgress = ({ color, height }) => {
     }
   };
 
-  return <div style={styles.progress} />;
+  return <div style={styles.progress} {...props} />;
 };
 
 export default PageProgress;
