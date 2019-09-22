@@ -15,15 +15,12 @@ const PageProgress = ({ color, height, ...props }) => {
     }
   };
 
-  useEffect(
-    () => {
-      window.addEventListener("scroll", watchScrolling);
-      return () => {
-        window.removeEventListener("scroll", watchScrolling);
-      };
-    },
-    [color, height]
-  );
+  useEffect(() => {
+    window.addEventListener("scroll", watchScrolling);
+    return () => {
+      window.removeEventListener("scroll", watchScrolling);
+    };
+  }, [color, height]);
 
   const styles = {
     progress: {
