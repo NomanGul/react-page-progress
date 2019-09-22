@@ -1,6 +1,6 @@
 {
   "name": "react-page-progress",
-  "version": "1.0.4",
+  "version": "1.1.1",
   "description": "React library that tracks a users progress through a page as they scroll",
   "main": "build/index.js",
   "scripts": {
