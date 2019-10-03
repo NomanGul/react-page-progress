@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const PageProgress = ({ color, height, ...props }) => {
+const PageProgress = ({ color, height, direction, ...props }) => {
   const [width, setWidth] = useState(null);
 
   const watchScrolling = () => {
@@ -20,8 +20,8 @@ const PageProgress = ({ color, height, ...props }) => {
     return () => {
       window.removeEventListener("scroll", watchScrolling);
     };
-  }, [color, height]);
-
+  }, [color, height, direction]);
+  console.log(direction)
   const styles = {
     progress: {
       marginTop: 0,
@@ -31,6 +31,7 @@ const PageProgress = ({ color, height, ...props }) => {
       height: height ? height : 4,
       width: width,
       top: 0,
+      right: direction === 'rightToLeft' ? 0 : 'auto',
       zIndex: 99,
       transition: "width 200ms ease-out"
     }
