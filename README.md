@@ -26,6 +26,7 @@ yarn add react-page-progress
 | :----- | :----: | :--------: | :------------------------------------------------------------------------------------------------------------------------------------------------- |
 | color  | string |     No     | `'Default is SkyBlue'`, `'green'` or `'#fb6249'` or ` 'rgb(255, 26, 26)'``// If you want Progress bar Opaque, You can use rgba(...) or hsla(...) ` |
 | height | number |     No     | `'Should be a Number, 4 is default'`                                                                                                               |
+| direction | string |     No     | `Should be from on of two strings. i.e: "leftToRight" or "rightToLeft"`                                                                                                               |
 
 ### Demo
 
