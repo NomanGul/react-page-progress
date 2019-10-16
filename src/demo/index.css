@@ -24,7 +24,7 @@ body {
 }
 
 .childDiv > p {
-  margin-top: 50%;
+  margin-top: 30%;
 }
 .magicImage {
   display: flex !important;
@@ -42,4 +42,9 @@ body {
   font-size: 5vw;
   font-family: 'Raleway', sans-serif;
   margin-bottom: 20%;
+}
+.Views{
+  padding-left: 2%;
+  font-size: 2vw;
+  font-family: 'Raleway', sans-serif;
 }
