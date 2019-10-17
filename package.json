@@ -1,6 +1,6 @@
 {
   "name": "react-page-progress",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "React library that tracks a users progress through a page as they scroll",
   "main": "build/index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "@svgr/webpack": "4.1.0",
     "babel-core": "6.26.3",
     "babel-eslint": "10.0.1",
-    "babel-jest": "23.6.0",
+    "babel-jest": "^25.0.0",
     "babel-loader": "8.0.5",
     "babel-plugin-named-asset-import": "^0.3.1",
     "babel-preset-react-app": "^7.0.1",
@@ -47,7 +47,7 @@
     "fs-extra": "4.0.3",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
-    "jest": "23.6.0",
+    "jest": "^25.0.0",
     "jest-pnp-resolver": "1.0.2",
     "jest-resolve": "23.6.0",
     "mini-css-extract-plugin": "0.5.0",

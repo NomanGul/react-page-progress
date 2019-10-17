@@ -19,7 +19,7 @@ export default class App extends Component {
 const Child = () => {
   return (
     <div className="childDiv">
-      <p>
+      <p className ='Views'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
         cupiditate error quisquam exercitationem enim. Libero earum maxime
         accusantium non quasi quod, eligendi provident eveniet facere?
@@ -29,7 +29,7 @@ const Child = () => {
       <div className="magicImage">
         <img src={gif} alt={"loading"} />
       </div>
-      <p>
+      <p className ='Views'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
         cupiditate error quisquam exercitationem enim. Libero earum maxime
         accusantium non quasi quod, eligendi provident eveniet facere?
