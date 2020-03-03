@@ -25,8 +25,10 @@ yarn add react-page-progress
 | Props  |  Type  | isRequired | Example                                                                                                                                            |
 | :----- | :----: | :--------: | :------------------------------------------------------------------------------------------------------------------------------------------------- |
 | color  | string |     No     | `'Default is SkyBlue'`, `'green'` or `'#fb6249'` or ` 'rgb(255, 26, 26)'``// If you want Progress bar Opaque, You can use rgba(...) or hsla(...) ` |
-| height | number |     No     | `'Should be a Number, 4 is default'`                                                                                                               |
-
+| thickness  | number |     No     | `'Should be a Number, default is 5'`                                                                                                                                     |
+| isVertical  | boolean |     No     | `'Should be a Boolean, default is false'`                                                                                                                                 |
+| speed  | number |     No     | `'Should be a Number in miliseconds, default is 200'`                                                                                                                                   |
+| isDirection   | string |     Yes     | `'Accepted values left/right & top/bottom'`                                                                                                                                |
 ### Demo
 
 **Watch Demo [Here](https://nomangul.github.io/react-page-progress)**

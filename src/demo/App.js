@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="divExample">
-        <PageProgress color={"#08bfd5"} height={5} />
+        <PageProgress color={"#08bfd5"} isVertical={false} speed ={200} isDirection="left" />
         <h1 className="hExample">React Page Progress Here!</h1>
         <p className="scrollIt">Just Scroll It</p>
         <Child />
