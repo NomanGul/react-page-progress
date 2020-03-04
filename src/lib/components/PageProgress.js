@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const PageProgress = ({ color, height, ...props }) => {
-  const [width, setWidth] = useState(null);
+const PageProgress = ({ color, thickness, isVertical, speed, isDirection, ...props }) => {
+  const [dimension, setDimension] = useState(null);
 
   const watchScrolling = () => {
     const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
@@ -9,9 +9,9 @@ const PageProgress = ({ color, height, ...props }) => {
     const winHeight = scrollHeight - clientHeight;
     const scrolled = `${(winScroll / winHeight) * 100}%`;
     if (winHeight > 0) {
-      return setWidth(scrolled);
+      return setDimension(scrolled);
     } else {
-      return setWidth(0);
+      return setDimension(0);
     }
   };
 
@@ -20,7 +20,7 @@ const PageProgress = ({ color, height, ...props }) => {
     return () => {
       window.removeEventListener("scroll", watchScrolling);
     };
-  }, [color, height]);
+  }, [color, thickness]);
 
   const styles = {
     progress: {
@@ -28,11 +28,11 @@ const PageProgress = ({ color, height, ...props }) => {
       padding: 0,
       background: color ? color : "skyblue",
       position: "fixed",
-      height: height ? height : 4,
-      width: width,
-      top: 0,
+      height: isVertical ? dimension : thickness || 5,
+      width: !isVertical ? dimension : thickness || 5,
+      [isDirection]: 0,
       zIndex: 99,
-      transition: "width 200ms ease-out"
+      transition: `${isVertical ? 'height' : 'width'} ${speed  || 200}ms ease-out`
     }
   };
 
